@@ -1,4 +1,4 @@
-# Monster Realm: Nightmare Quest 🦇 (Búsqueda de la Pesadilla)
+# Monster Realm: Nightmare Quest 🦇
 
 **Monster Realm** es un motor de juego de plataformas 2D de terror gótico atmosférico, creado exclusivamente con HTML5 Canvas y JavaScript. Toma el control de los monstruos clásicos de la noche y reclama el reino a través de tres desafiantes niveles de plataformas, combate y exploración.
 
