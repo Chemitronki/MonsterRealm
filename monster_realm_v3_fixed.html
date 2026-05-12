@@ -67,7 +67,7 @@ canvas{display:block;image-rendering:pixelated}
   <div id="notify"></div>
   <div id="cs">
     <h1>MONSTER REALM</h1>
-    <div class="sub">NIGHTMARE QUEST</div>
+    <div class="sub">LA PESADILLA COMIENZA</div>
     <div class="inst">3 NIVELES | JEFES CON FASES | SISTEMA DE NIVEL | COFRES Y LLAVES</div>
     <div class="cgrid" id="cgrid"></div>
   </div>
@@ -815,7 +815,7 @@ class Game{
       ctx.fillStyle=`rgba(255,220,0,${0.7+0.3*Math.sin(t+k.x)})`;
       ctx.fillRect(k.x,k.y+Math.sin(t)*3,k.w,k.h);
       ctx.fillStyle='#cc8800';ctx.fillRect(k.x+2,k.y+4+Math.sin(t)*3,k.w-4,4);
-      ctx.fillStyle='#ffff44';ctx.font='8px Courier New';ctx.fillText('KEY',k.x-2,k.y-4+Math.sin(t)*3);
+      ctx.fillStyle='#ffff44';ctx.font='8px Courier New';ctx.fillText('LLAVE',k.x-2,k.y-4+Math.sin(t)*3);
     });
 
     this.chests.forEach(ch=>{
@@ -824,7 +824,7 @@ class Game{
       ctx.fillStyle=ch.open?'#1a0d00':'#774400';ctx.fillRect(ch.x+2,ch.y+2,ch.w-4,ch.h*.45);
       ctx.fillStyle='#ffcc00';ctx.fillRect(ch.x+ch.w/2-4,ch.y+5,8,8);
       ctx.strokeStyle='#cc8800';ctx.lineWidth=1;ctx.strokeRect(ch.x,ch.y,ch.w,ch.h);
-      if(ch.needsKey&&!ch.open){ctx.fillStyle='#ffff00';ctx.font='8px Courier New';ctx.fillText('KEY',ch.x+2,ch.y-4);}
+      if(ch.needsKey&&!ch.open){ctx.fillStyle='#ffff00';ctx.font='8px Courier New';ctx.fillText('LLAVE',ch.x+2,ch.y-4);}
       if(!ch.open){ctx.fillStyle='#cc99ff';ctx.font='8px Courier New';ctx.fillText('C',ch.x+ch.w+2,ch.y+10);}
     });
 

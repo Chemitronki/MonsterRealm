@@ -1,41 +1,42 @@
-# Monster Realm: Nightmare Quest 🦇
+# Monster Realm: Nightmare Quest 🦇 (Búsqueda de la Pesadilla)
 
-**Monster Realm** is an atmospheric Gothic Horror 2D Platformer engine built with pure HTML5 Canvas and JavaScript. Take control of classic night monsters and reclaim the realm through three challenging levels of platforming, combat, and exploration.
+**Monster Realm** es un motor de juego de plataformas 2D de terror gótico atmosférico, creado exclusivamente con HTML5 Canvas y JavaScript. Toma el control de los monstruos clásicos de la noche y reclama el reino a través de tres desafiantes niveles de plataformas, combate y exploración.
 
-## 🎮 How to Play
+## 🎮 Cómo Jugar
 
-### Controls
-- **Move:** `Arrow Keys` or `A`/`D`
-- **Jump:** `Z`, `W`, or `Arrow Up` (Vampire has Double Jump!)
-- **Special Action:** `X` (Unique to each monster)
-- **Interact:** `C` (Open chests, activate levers, collect items)
-- **Stomp:** Jump on enemies to defeat them!
+### Controles
+- **Mover:** `Teclas de flechas` o `A`/`D`
+- **Saltar:** `Z`, `W` o `Flecha Arriba` (¡El Vampiro tiene doble salto!)
+- **Acción Especial:** `X` (Habilidad única de cada monstruo)
+- **Interactuar:** `C` (Abrir cofres, activar palancas, recoger objetos)
+- **Ataque en salto:** ¡Salta sobre los enemigos para derrotarlos!
 
-### Gameplay Mechanics
-- **Souls:** Collect yellow souls to gain height and experience.
-- **Leveling Up:** Gaining XP increases your maximum HP and strengthens your character.
-- **Keys & Chests:** Some chests are locked and require a **KEY** found within the level.
-- **Levers & Doors:** Activate levers to open paths and progress through the levels.
-- **Goal:** Defeat all enemies in common levels or the Final Boss in the last level to unlock the EXIT.
+### Mecánicas de Juego
+- **Almas:** Recoge las almas amarillas para ganar puntos y experiencia.
+- **Subir de Nivel:** Ganar XP aumenta tu HP máximo y fortalece a tu personaje.
+- **Llaves y Cofres:** Algunos cofres están cerrados y requieren una **LLAVE** que se encuentra dentro del nivel.
+- **Palancas y Puertas:** Activa palancas para abrir caminos y progresar por los niveles.
+- **Objetivo:** Derrota a todos los enemigos en los niveles comunes o al Jefe Final en el último nivel para desbloquear la SALIDA.
 
-## 🧛 Playable Monsters
+## 🧛 Monstruos Jugables
 
-Each character has unique stats (Speed, Jump, HP) and a special ability:
+Cada personaje tiene estadísticas únicas (Velocidad, Salto, HP) y una habilidad especial:
 
-- **Vampire:** Agile with a **Double Jump**. Can transform into a **Bat** to fly briefly.
-- **Werewolf:** The fastest and highest jumper. Uses a powerful **Claw Dash**.
-- **Frankenstein:** Slow but has massive HP. Uses an **Electric Shock** to damage nearby enemies.
-- **Mummy:** Balanced stats. Throws **Magic Wraps** to defeat enemies from a distance.
+- **Vampiro:** Ágil y con **Doble Salto**. Puede transformarse en **Murciélago** para volar brevemente.
+- **Hombre Lobo:** El más rápido y con el salto más alto. Realiza un poderoso **Zarpazo Veloz**.
+- **Frankenstein:** Lento pero con muchísima vida (HP). Usa una **Descarga Eléctrica** para dañar a los enemigos cercanos.
+- **Momia:** Estadísticas equilibradas. Lanza **Vendas Mágicas** para derrotar enemigos a distancia.
 
-## 🚀 Recent Improvements
-- **Responsive Scaling:** The game now automatically scales to fit your browser window perfectly while maintaining a crisp pixel-art aesthetic.
-- **Main Menu Quick-Back:** A dedicated "MENÚ PRINCIPAL" button is available in the bottom-right corner during gameplay for easy navigation.
-- **Improved HUD:** Relocated instructions and ability status to the bottom-left for a cleaner, non-intrusive UI.
+## 🚀 Mejoras Recientes
+- **Escalado Responsivo:** El juego ahora se ajusta perfectamente a la ventana de tu navegador manteniendo una estética "pixel-art" nítida.
+- **Menú Rápido:** Botón dedicado de "MENÚ PRINCIPAL" disponible en la esquina inferior derecha durante el juego para una navegación sencilla.
+- **Interfaz Mejorada (HUD):** Instrucciones y estado de habilidades reubicados en la parte inferior izquierda para una interfaz más limpia.
+- **Traducción Total:** Todo el juego y documentación han sido traducidos al español.
 
-## 🛠️ Technical Details
-- **Engine:** custom 2D Canvas Engine (No external frameworks).
-- **Single File:** The entire game logic, assets (procedural), and styles are contained within a single HTML file for maximum portability.
-- **Procedural Generation:** Backgrounds and level atmospheres are generated dynamically based on the chosen character.
+## 🛠️ Detalles Técnicos
+- **Motor:** Motor de Canvas 2D personalizado (sin frameworks externos).
+- **Archivo Único:** Toda la lógica del juego, recursos (procedurales) y estilos están contenidos en un solo archivo HTML.
+- **Generación Procedural:** Los fondos y la atmósfera de los niveles se generan dinámicamente según el personaje elegido.
 
 ---
-*Developed with Gothic Horror passion.* 🌑
+*Desarrollado con pasión por el terror gótico.* 🌑
