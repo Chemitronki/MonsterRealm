@@ -1,9 +1,11 @@
 
 <style>
 *{margin:0;padding:0;box-sizing:border-box}
-body{background:#050008;overflow:hidden;font-family:'Courier New',monospace}
-#gc{width:800px;height:520px;position:relative;margin:0 auto}
-canvas{display:block}
+body{background:#050008;overflow:hidden;font-family:'Courier New',monospace;display:flex;align-items:center;justify-content:center;min-height:100vh;margin:0}
+#gc{width:800px;height:520px;position:relative;transform:scale(1.4);transform:scale(min(1.8, calc(95vw / 800), calc(95vh / 520)));transform-origin:center;box-shadow:0 0 100px rgba(155,48,255,0.15);border:1px solid #3300aa}
+canvas{display:block;image-rendering:pixelated}
+#btn-menu-back{position:absolute;bottom:10px;right:10px;display:none;pointer-events:all;background:rgba(26,0,64,0.8);border:2px solid #9b30ff;color:#cc99ff;padding:6px 15px;font-size:11px;cursor:pointer;font-family:'Courier New';z-index:2000;transition:all 0.2s;text-transform:uppercase;letter-spacing:1px}
+#btn-menu-back:hover{background:#9b30ff;color:#000;box-shadow:0 0 15px #9b30ff}
 #cs{position:absolute;top:0;left:0;width:100%;height:100%;background:#050008;display:flex;flex-direction:column;align-items:center;justify-content:center;pointer-events:all}
 #cs h1{color:#9b30ff;font-size:26px;letter-spacing:3px;margin-bottom:4px}
 #cs .sub{color:#66ff66;font-size:10px;letter-spacing:2px;margin-bottom:4px}
@@ -31,13 +33,14 @@ canvas{display:block}
 #msgov p{color:#cc99ff;font-size:12px;margin-bottom:8px;text-align:center;max-width:360px;line-height:1.7;white-space:pre-line}
 .mbtn{background:#1a0040;border:2px solid #9b30ff;color:#cc99ff;padding:8px 24px;font-size:13px;cursor:pointer;font-family:'Courier New';margin-top:6px;display:none}
 .mbtn:hover{background:#2a0060}
-#khint{position:absolute;bottom:6px;left:6px;color:#334455;font-size:9px;display:none;pointer-events:none;line-height:1.7}
-#spcool{position:absolute;bottom:6px;right:6px;font-size:10px;display:none;pointer-events:none;text-align:right;line-height:1.6}
+#khint{position:absolute;bottom:10px;left:10px;color:#8899aa;font-size:9px;display:none;pointer-events:none;line-height:1.6}
+#spcool{position:absolute;bottom:42px;left:10px;font-size:10px;display:none;pointer-events:none;text-align:left;line-height:1.6}
 #notify{position:absolute;top:52px;left:50%;transform:translateX(-50%);font-size:12px;pointer-events:none;display:none;white-space:nowrap;color:#ffff00}
 #mmcv{position:absolute;bottom:6px;left:50%;transform:translateX(-50%);display:none}
 </style>
 <div id="gc">
   <canvas id="gameCanvas" width="800" height="520"></canvas>
+  <button id="btn-menu-back">MENÚ PRINCIPAL</button>
   <div id="hud">
     <div class="hr"><span class="hl">HP</span><div class="hb"><div class="hf" id="hpf" style="width:100%"></div></div><span id="hpt" style="color:#cc99ff;font-size:9px;margin-left:3px"></span></div>
     <div class="hr"><span class="hl">SP</span><div class="hb"><div class="hf" id="spf" style="width:100%"></div></div></div>
@@ -169,9 +172,9 @@ function startGame(ch){
   document.getElementById('hud').style.display='block';
   document.getElementById('lvlhud').style.display='block';
   document.getElementById('rhud').style.display='block';
-  document.getElementById('khint').style.display='block';
   document.getElementById('spcool').style.display='block';
   document.getElementById('mmcv').style.display='block';
+  document.getElementById('btn-menu-back').style.display='block';
   document.getElementById('cnameh').textContent=ch.name.toUpperCase();
   G=new Game(ch);
   G.loadLevel(0);
@@ -204,6 +207,7 @@ class Game{
     };
     window.addEventListener('keydown',e=>this.kd(e,true));
     window.addEventListener('keyup',e=>this.kd(e,false));
+    document.getElementById('btn-menu-back').onclick=()=>this.goMenu();
   }
 
   loadLevel(idx){
@@ -709,7 +713,7 @@ class Game{
     document.getElementById('plvl').textContent=this.pLevel;
     document.getElementById('keyind').style.display=p.hasKey?'block':'none';
     const sc=this.spCd;
-    document.getElementById('spcool').innerHTML=(sc>0?'X: '+Math.ceil(sc/60)+'s':'X: LISTO')+'<br>C: INTERACTUAR';
+    document.getElementById('spcool').innerHTML=(sc>0?'X: '+Math.ceil(sc/60)+'s':'X: ATACAR')+'<br>C: INTERACTUAR';
     document.getElementById('spcool').style.color=sc>0?'#664488':'#8844cc';
   }
 
@@ -749,7 +753,7 @@ class Game{
   goMenu(){
     this.running=false;cancelAnimationFrame(this.raf);
     document.getElementById('msgov').style.display='none';
-    ['hud','lvlhud','rhud','khint','spcool'].forEach(id=>document.getElementById(id).style.display='none');
+    ['hud','lvlhud','rhud','khint','spcool','btn-menu-back'].forEach(id=>document.getElementById(id).style.display='none');
     document.getElementById('mmcv').style.display='none';
     document.getElementById('cs').style.display='flex';
     window.removeEventListener('keydown',this.kd);window.removeEventListener('keyup',this.kd);
