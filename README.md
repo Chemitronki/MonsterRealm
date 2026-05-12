@@ -2,6 +2,13 @@
 
 **Monster Realm** es un motor de juego de plataformas 2D de terror gótico atmosférico, creado exclusivamente con HTML5 Canvas y JavaScript. Toma el control de los monstruos clásicos de la noche y reclama el reino a través de tres desafiantes niveles de plataformas, combate y exploración.
 
+## 🚀 Inicio Rápido (Cómo Jugar)
+
+¡No necesitas instalar nada! Para sumergirte en la pesadilla, solo tienes que:
+1. Descargar o clonar este repositorio.
+2. Abrir el archivo `monster_realm_v3_fixed.html` en tu navegador favorito (Chrome, Firefox, Edge, etc.).
+3. ¡Y listo! Ya puedes empezar a jugar.
+
 ## 🎮 Cómo Jugar
 
 ### Controles
